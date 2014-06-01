@@ -25,7 +25,7 @@ int main(){
 	exit(EXIT_FAILURE);
     }// end if
 
-    printf("Waitting thread finish...");
+    printf("Waitting thread finish...\n");
     res = pthread_join(a_thread, &thread_result_msg);
     if(res!=0){
         perror("Thread join failed.");
@@ -43,7 +43,7 @@ int main(){
 
 void *thread_function(void *arg){
     while(1){
-        sleep(10);
+        sleep(1);
 	printf("weakup.\n");
     }
 //    strcpy(message, "Bye");

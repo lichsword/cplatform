@@ -2,7 +2,7 @@
 # '#': comments
 # ':': dependency
 ##########################################
-PROJ = mysqlite
+PROJ = guess
 
 C = gcc
 OUT = -o
@@ -12,7 +12,7 @@ LIBS =
 INCLUDE = -I /usr/include/nptl 
 #/usr/include/ncurses
 #LINK = -L /usr/lib/nptl -lcurses
-LINK = -lcurses -lsqlite3
+LINK = -lcurses
 MACRO = -D _REENTRANT
 
 # 1:enable 0:disable
