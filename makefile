@@ -2,7 +2,7 @@
 # '#': comments
 # ':': dependency
 ##########################################
-PROJ = mytime
+PROJ = bus
 
 C = gcc
 OUT = -o
