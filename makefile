@@ -2,7 +2,7 @@
 # '#': comments
 # ':': dependency
 ##########################################
-PROJ = bus
+PROJ = msgqueue
 
 C = gcc
 OUT = -o
