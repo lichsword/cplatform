@@ -1,5 +1,6 @@
 /**
  * 现在进展：在调用 sem_init 时，发生返回-1失败，网上的说法是 iOS上不支持无名信号量.
+ * http://blog.csdn.net/xiadasong007/article/details/8534184
  */
 #include <stdio.h>
 #include <stdlib.h>
