@@ -4,6 +4,10 @@
 #include <stdlib.h>
 #include <ncurses.h>
 
+JNIEXPORT void JNICALL Java_com_jni_TTY_flash(JNIEnv * env, jobject obj){
+    flash();
+}
+
 JNIEXPORT void JNICALL Java_com_jni_TTY_echo(JNIEnv * env, jobject obj){
     echo();
 }
@@ -30,6 +34,14 @@ JNIEXPORT void JNICALL Java_com_jni_TTY_refresh(JNIEnv * env, jobject obj){
 
 JNIEXPORT void JNICALL Java_com_jni_TTY_clear(JNIEnv * env, jobject obj){
     clear();
+}
+
+JNIEXPORT void JNICALL Java_com_jni_TTY_clrtobot(JNIEnv * env, jobject obj){
+    clrtobot();
+}
+
+JNIEXPORT void JNICALL Java_com_jni_TTY_clrtoeol(JNIEnv * env, jobject obj){
+    clrtoeol();
 }
 
 JNIEXPORT void JNICALL Java_com_jni_TTY_erase(JNIEnv * env, jobject obj){
@@ -61,7 +73,14 @@ JNIEXPORT void JNICALL Java_com_jni_TTY_move(JNIEnv *env, jobject obj, jint x, j
     move(x, y);
 }
 
-JNIEXPORT int JNICALL Java_com_jni_TTY_getch(JNIEnv *env, jobject obj){
+JNIEXPORT jint JNICALL Java_com_jni_TTY_getch(JNIEnv *env, jobject obj){
     jint ch = getch();
     return ch;
+}
+
+JNIEXPORT jstring JNICALL Java_com_jni_TTY_getstr(JNIEnv *env, jobject obj){
+    char string[128];
+    getstr(string);
+    jstring result = (*env)->NewStringUTF(env, string);
+    return result;
 }
