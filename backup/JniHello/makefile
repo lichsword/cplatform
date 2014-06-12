@@ -2,8 +2,7 @@
 # '#': comments
 # ':': dependency
 ##########################################
-PROJ = JniTTY
-LIB_NAME = tty
+PROJ = JniHello
 
 C = gcc
 OUT = -o
@@ -14,7 +13,7 @@ JAVA_INC = /Library/Java/JavaVirtualMachines/1.6.0_65-b14-462.jdk/Contents/Home/
 INCLUDE = -I /usr/include/nptl -I $(JAVA_INC)
 #/usr/include/ncurses
 #LINK = -L /usr/lib/nptl -lcurses
-LINK = -lcurses -lsqlite3 -dynamiclib -o lib$(LIB_NAME).jnilib
+LINK = -lcurses -lsqlite3 -dynamiclib -o libhello.jnilib
 MACRO = -D _REENTRANT
 
 # 1:enable 0:disable
@@ -36,4 +35,4 @@ $(PROJ).o:$(PROJ).c
 #$(MOD).o:$(MOD).c $(LOG).h $(COM).h
 #	$(CC) $(DFLAG) -c $(MOD).c
 clean:
-	rm *.o $(PROJ) *.jnilib
+	rm *.o $(PROJ)
