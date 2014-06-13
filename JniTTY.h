@@ -24,18 +24,19 @@ JNIEXPORT void JNICALL Java_com_jni_TTY_clrtobot(JNIEnv *, jobject);
 JNIEXPORT void JNICALL Java_com_jni_TTY_clrtoeol(JNIEnv *, jobject);
 
 JNIEXPORT void JNICALL Java_com_jni_TTY_move(JNIEnv *, jobject, jint, jint);
+
 JNIEXPORT jint JNICALL Java_com_jni_TTY_getch(JNIEnv *, jobject);
 JNIEXPORT jstring JNICALL Java_com_jni_TTY_getstr(JNIEnv *, jobject);
-/**
- * class: com.jni.TTY
- * method: addstr
- */
 JNIEXPORT void JNICALL Java_com_jni_TTY_addstr(JNIEnv *, jobject, jstring string);
-/**
- * class: com.jni.TTY
- * method: cls
- */
-JNIEXPORT void JNICALL Java_com_jni_TTY_cls(JNIEnv *, jobject);
+
+JNIEXPORT jboolean JNICALL Java_com_jni_TTY_hasColors(JNIEnv *, jobject);
+JNIEXPORT jint JNICALL Java_com_jni_TTY_startColor(JNIEnv *, jobject);
+JNIEXPORT void JNICALL Java_com_jni_TTY_attroff(JNIEnv *, jobject, jint);
+JNIEXPORT void JNICALL Java_com_jni_TTY_attrset(JNIEnv *, jobject, jint);
+JNIEXPORT void JNICALL Java_com_jni_TTY_initPair(JNIEnv *, jobject, jint pair_number, jint foreground, jint background);
+JNIEXPORT jint JNICALL Java_com_jni_TTY_getColorPair(JNIEnv *, jobject, jint pair_number);
+
+JNIEXPORT jbyte JNICALL Java_com_jni_TTY_attrUnderline(JNIEnv *, jobject);
 
 //#ifdef _cplusplus
 //}

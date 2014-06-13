@@ -419,18 +419,27 @@ JavaVMOption	include/jni.h	/^typedef struct JavaVMOption {$/;"	s
 JavaVMOption	include/jni.h	/^} JavaVMOption;$/;"	t	typeref:struct:JavaVMOption
 JavaVM_	include/jni.h	/^struct JavaVM_ {$/;"	s
 Java_com_jni_TTY_addstr	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_addstr(JNIEnv * env, jobject obj, jstring string){$/;"	f
+Java_com_jni_TTY_attroff	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_attroff(JNIEnv * env, jobject object, jint value){$/;"	f
+Java_com_jni_TTY_attrset	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_attrset(JNIEnv * env, jobject object, jint value){$/;"	f
 Java_com_jni_TTY_clear	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_clear(JNIEnv * env, jobject obj){$/;"	f
+Java_com_jni_TTY_clrtobot	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_clrtobot(JNIEnv * env, jobject obj){$/;"	f
+Java_com_jni_TTY_clrtoeol	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_clrtoeol(JNIEnv * env, jobject obj){$/;"	f
 Java_com_jni_TTY_cls	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_cls(JNIEnv * env, jobject obj){$/;"	f
 Java_com_jni_TTY_echo	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_echo(JNIEnv * env, jobject obj){$/;"	f
 Java_com_jni_TTY_endwin	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_endwin(JNIEnv * env, jobject obj){$/;"	f
 Java_com_jni_TTY_erase	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_erase(JNIEnv * env, jobject obj){$/;"	f
+Java_com_jni_TTY_flash	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_flash(JNIEnv * env, jobject obj){$/;"	f
+Java_com_jni_TTY_get_color_pair	JniTTY.c	/^JNIEXPORT jint JNICALL Java_com_jni_TTY_get_color_pair(JNIEnv * env, jobject object, jint pair_number){$/;"	f
 Java_com_jni_TTY_getch	JniTTY.c	/^JNIEXPORT jint JNICALL Java_com_jni_TTY_getch(JNIEnv *env, jobject obj){$/;"	f
 Java_com_jni_TTY_getstr	JniTTY.c	/^JNIEXPORT jstring JNICALL Java_com_jni_TTY_getstr(JNIEnv *env, jobject obj){$/;"	f
+Java_com_jni_TTY_has_colors	JniTTY.c	/^JNIEXPORT jboolean JNICALL Java_com_jni_TTY_has_colors(JNIEnv * env, jobject object){$/;"	f
+Java_com_jni_TTY_init_pair	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_init_pair(JNIEnv * env, jobject object, jint pair_number, jint foreground, jint background){$/;"	f
 Java_com_jni_TTY_initscr	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_initscr(JNIEnv * env, jobject obj){$/;"	f
 Java_com_jni_TTY_move	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_move(JNIEnv *env, jobject obj, jint x, jint y){$/;"	f
 Java_com_jni_TTY_noecho	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_noecho(JNIEnv * env, jobject obj){$/;"	f
 Java_com_jni_TTY_refresh	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_refresh(JNIEnv * env, jobject obj){$/;"	f
 Java_com_jni_TTY_reset	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_reset(JNIEnv * env, jobject obj){$/;"	f
+Java_com_jni_TTY_start_color	JniTTY.c	/^JNIEXPORT jint JNICALL Java_com_jni_TTY_start_color(JNIEnv * env, jobject object){$/;"	f
 Java_com_lich_platform_Main_hello	backup/JniHello/JniHello.c	/^JNIEXPORT void JNICALL Java_com_lich_platform_Main_hello(JNIEnv * env, jobject obj){$/;"	f
 LIBS	backup/JniHello/makefile	/^LIBS = $/;"	m
 LIBS	backup/guess/makefile	/^LIBS = $/;"	m

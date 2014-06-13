@@ -84,3 +84,32 @@ JNIEXPORT jstring JNICALL Java_com_jni_TTY_getstr(JNIEnv *env, jobject obj){
     jstring result = (*env)->NewStringUTF(env, string);
     return result;
 }
+
+JNIEXPORT jboolean JNICALL Java_com_jni_TTY_hasColors(JNIEnv * env, jobject object){
+//    if(has_colors()){
+//        return JNI_TRUE;
+//    }else{
+//        return JNI_FALSE;
+//    }
+     return (jboolean)has_colors();
+}
+
+JNIEXPORT jint JNICALL Java_com_jni_TTY_startColor(JNIEnv * env, jobject object){
+    return (jint) start_color();
+}
+JNIEXPORT void JNICALL Java_com_jni_TTY_attroff(JNIEnv * env, jobject object, jint value){
+    attroff(value);
+}
+JNIEXPORT void JNICALL Java_com_jni_TTY_attrset(JNIEnv * env, jobject object, jint value){
+    attrset(value);
+}
+JNIEXPORT void JNICALL Java_com_jni_TTY_initPair(JNIEnv * env, jobject object, jint pair_number, jint foreground, jint background){
+    init_pair(pair_number, foreground, background);
+}
+JNIEXPORT jint JNICALL Java_com_jni_TTY_getColorPair(JNIEnv * env, jobject object, jint pair_number){
+    return COLOR_PAIR(pair_number);
+}
+
+JNIEXPORT jbyte JNICALL Java_com_jni_TTY_attrUnderline(JNIEnv * env, jobject object){
+    return (jbyte) (A_UNDERLINE);
+}
