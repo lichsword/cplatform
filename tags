@@ -419,27 +419,39 @@ JavaVMOption	include/jni.h	/^typedef struct JavaVMOption {$/;"	s
 JavaVMOption	include/jni.h	/^} JavaVMOption;$/;"	t	typeref:struct:JavaVMOption
 JavaVM_	include/jni.h	/^struct JavaVM_ {$/;"	s
 Java_com_jni_TTY_addstr	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_addstr(JNIEnv * env, jobject obj, jstring string){$/;"	f
+Java_com_jni_TTY_attrAltcharset	JniTTY.c	/^JNIEXPORT jbyte JNICALL Java_com_jni_TTY_attrAltcharset(JNIEnv * env, jobject object){$/;"	f
+Java_com_jni_TTY_attrBlink	JniTTY.c	/^JNIEXPORT jbyte JNICALL Java_com_jni_TTY_attrBlink(JNIEnv * env, jobject object){$/;"	f
+Java_com_jni_TTY_attrBold	JniTTY.c	/^JNIEXPORT jbyte JNICALL Java_com_jni_TTY_attrBold(JNIEnv * env, jobject object){$/;"	f
+Java_com_jni_TTY_attrChartext	JniTTY.c	/^JNIEXPORT jbyte JNICALL Java_com_jni_TTY_attrChartext(JNIEnv * env, jobject object){$/;"	f
+Java_com_jni_TTY_attrDim	JniTTY.c	/^JNIEXPORT jbyte JNICALL Java_com_jni_TTY_attrDim(JNIEnv * env, jobject object){$/;"	f
+Java_com_jni_TTY_attrInvis	JniTTY.c	/^JNIEXPORT jbyte JNICALL Java_com_jni_TTY_attrInvis(JNIEnv * env, jobject object){$/;"	f
+Java_com_jni_TTY_attrNormal	JniTTY.c	/^JNIEXPORT jbyte JNICALL Java_com_jni_TTY_attrNormal(JNIEnv * env, jobject object){$/;"	f
+Java_com_jni_TTY_attrProtect	JniTTY.c	/^JNIEXPORT jbyte JNICALL Java_com_jni_TTY_attrProtect(JNIEnv * env, jobject object){$/;"	f
+Java_com_jni_TTY_attrReverse	JniTTY.c	/^JNIEXPORT jbyte JNICALL Java_com_jni_TTY_attrReverse(JNIEnv * env, jobject object){$/;"	f
+Java_com_jni_TTY_attrStandout	JniTTY.c	/^JNIEXPORT jbyte JNICALL Java_com_jni_TTY_attrStandout(JNIEnv * env, jobject object){$/;"	f
+Java_com_jni_TTY_attrUnderline	JniTTY.c	/^JNIEXPORT jbyte JNICALL Java_com_jni_TTY_attrUnderline(JNIEnv * env, jobject object){$/;"	f
 Java_com_jni_TTY_attroff	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_attroff(JNIEnv * env, jobject object, jint value){$/;"	f
+Java_com_jni_TTY_attron	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_attron(JNIEnv * env, jobject object, jint value){$/;"	f
 Java_com_jni_TTY_attrset	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_attrset(JNIEnv * env, jobject object, jint value){$/;"	f
 Java_com_jni_TTY_clear	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_clear(JNIEnv * env, jobject obj){$/;"	f
 Java_com_jni_TTY_clrtobot	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_clrtobot(JNIEnv * env, jobject obj){$/;"	f
 Java_com_jni_TTY_clrtoeol	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_clrtoeol(JNIEnv * env, jobject obj){$/;"	f
-Java_com_jni_TTY_cls	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_cls(JNIEnv * env, jobject obj){$/;"	f
 Java_com_jni_TTY_echo	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_echo(JNIEnv * env, jobject obj){$/;"	f
 Java_com_jni_TTY_endwin	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_endwin(JNIEnv * env, jobject obj){$/;"	f
 Java_com_jni_TTY_erase	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_erase(JNIEnv * env, jobject obj){$/;"	f
 Java_com_jni_TTY_flash	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_flash(JNIEnv * env, jobject obj){$/;"	f
-Java_com_jni_TTY_get_color_pair	JniTTY.c	/^JNIEXPORT jint JNICALL Java_com_jni_TTY_get_color_pair(JNIEnv * env, jobject object, jint pair_number){$/;"	f
+Java_com_jni_TTY_getColorPair	JniTTY.c	/^JNIEXPORT jint JNICALL Java_com_jni_TTY_getColorPair(JNIEnv * env, jobject object, jint pair_number){$/;"	f
 Java_com_jni_TTY_getch	JniTTY.c	/^JNIEXPORT jint JNICALL Java_com_jni_TTY_getch(JNIEnv *env, jobject obj){$/;"	f
 Java_com_jni_TTY_getstr	JniTTY.c	/^JNIEXPORT jstring JNICALL Java_com_jni_TTY_getstr(JNIEnv *env, jobject obj){$/;"	f
-Java_com_jni_TTY_has_colors	JniTTY.c	/^JNIEXPORT jboolean JNICALL Java_com_jni_TTY_has_colors(JNIEnv * env, jobject object){$/;"	f
-Java_com_jni_TTY_init_pair	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_init_pair(JNIEnv * env, jobject object, jint pair_number, jint foreground, jint background){$/;"	f
+Java_com_jni_TTY_hasColors	JniTTY.c	/^JNIEXPORT jboolean JNICALL Java_com_jni_TTY_hasColors(JNIEnv * env, jobject object){$/;"	f
+Java_com_jni_TTY_initPair	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_initPair(JNIEnv * env, jobject object, jint pair_number, jint foreground, jint background){$/;"	f
 Java_com_jni_TTY_initscr	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_initscr(JNIEnv * env, jobject obj){$/;"	f
+Java_com_jni_TTY_mapAttr	JniTTY.c	/^JNIEXPORT jbyte JNICALL Java_com_jni_TTY_mapAttr(JNIEnv * env, jobject jobject, jint value){$/;"	f
 Java_com_jni_TTY_move	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_move(JNIEnv *env, jobject obj, jint x, jint y){$/;"	f
 Java_com_jni_TTY_noecho	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_noecho(JNIEnv * env, jobject obj){$/;"	f
 Java_com_jni_TTY_refresh	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_refresh(JNIEnv * env, jobject obj){$/;"	f
 Java_com_jni_TTY_reset	JniTTY.c	/^JNIEXPORT void JNICALL Java_com_jni_TTY_reset(JNIEnv * env, jobject obj){$/;"	f
-Java_com_jni_TTY_start_color	JniTTY.c	/^JNIEXPORT jint JNICALL Java_com_jni_TTY_start_color(JNIEnv * env, jobject object){$/;"	f
+Java_com_jni_TTY_startColor	JniTTY.c	/^JNIEXPORT jint JNICALL Java_com_jni_TTY_startColor(JNIEnv * env, jobject object){$/;"	f
 Java_com_lich_platform_Main_hello	backup/JniHello/JniHello.c	/^JNIEXPORT void JNICALL Java_com_lich_platform_Main_hello(JNIEnv * env, jobject obj){$/;"	f
 LIBS	backup/JniHello/makefile	/^LIBS = $/;"	m
 LIBS	backup/guess/makefile	/^LIBS = $/;"	m
@@ -460,6 +472,18 @@ MACRO	backup/msgqueue/makefile	/^MACRO = -D _REENTRANT$/;"	m
 MACRO	backup/mysqlite3/makefile	/^MACRO = -D _REENTRANT$/;"	m
 MACRO	backup/mytime/makefile	/^MACRO = -D _REENTRANT$/;"	m
 MACRO	makefile	/^MACRO = -D _REENTRANT$/;"	m
+MASK_A_ALTCHARSET	JniTTY.h	/^const int MASK_A_ALTCHARSET = 0x2000;$/;"	v
+MASK_A_BLINK	JniTTY.h	/^const int MASK_A_BLINK = 0x100;$/;"	v
+MASK_A_BOLD	JniTTY.h	/^const int MASK_A_BOLD = 0x400;$/;"	v
+MASK_A_CHARTEXT	JniTTY.h	/^const int MASK_A_CHARTEXT = 0x4000;$/;"	v
+MASK_A_DIM	JniTTY.h	/^const int MASK_A_DIM = 0x200;$/;"	v
+MASK_A_INVIS	JniTTY.h	/^const int MASK_A_INVIS = 0x1000;$/;"	v
+MASK_A_NORMAL	JniTTY.h	/^const int MASK_A_NORMAL = 0x10;$/;"	v
+MASK_A_PROTECT	JniTTY.h	/^const int MASK_A_PROTECT = 0x800;$/;"	v
+MASK_A_REVERSE	JniTTY.h	/^const int MASK_A_REVERSE = 0x80;$/;"	v
+MASK_A_STANDOUT	JniTTY.h	/^const int MASK_A_STANDOUT = 0x20;$/;"	v
+MASK_A_UNDERLINE	JniTTY.h	/^const int MASK_A_UNDERLINE = 0x40;$/;"	v
+MASK_COLOR	JniTTY.h	/^const int MASK_COLOR = 0xf;$/;"	v
 MILLISECOND	backup/mytime/mytime.h	/^const int MILLISECOND = 14;$/;"	v
 MINUTE	backup/mytime/mytime.h	/^const int MINUTE = 12;$/;"	v
 MONTH	backup/mytime/mytime.h	/^const int MONTH = 2;$/;"	v

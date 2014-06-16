@@ -2,8 +2,8 @@
 # '#': comments
 # ':': dependency
 ##########################################
-PROJ = JniGIT
-LIB_NAME = git
+PROJ = JniTTY
+LIB_NAME = tty
 
 C = gcc
 OUT = -o
