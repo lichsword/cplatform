@@ -23,8 +23,30 @@ JNIEXPORT void JNICALL Java_com_jni_GIT_log(JNIEnv * env, jobject obj,
     const int SIZE = 1024;
     char * log;
 
-    // TODO
-    char cmd[] = "cd /Users/lichsword/Documents/workspace_company/taoappcenter_android && git log --author='wangyue' --since='1.days' | grep '    '";
+    char cmd[SIZE];
+    memset(cmd, 0, SIZE);
+
+    const char part_cd[] = "cd ";
+    const char part_git_log[] = " && git log ";
+    const char part_git_author[] = " --author='";
+    const char part_git_since[] = "' --since='";
+    const char part_grep[] = "' | grep '    '";
+
+    const char * temp_path = (*env)->GetStringUTFChars(env, path, 0);
+    const char * temp_author = (*env)->GetStringUTFChars(env, author, 0);
+    const char * temp_since = (*env)->GetStringUTFChars(env, since, 0);
+
+    strcpy(cmd, part_cd);
+    strcat(cmd, temp_path);
+    strcat(cmd, part_git_log);
+    strcat(cmd, part_git_author);
+    strcat(cmd, temp_author);
+    strcat(cmd, part_git_since);
+    strcat(cmd, temp_since);
+    strcat(cmd, part_grep);
+    
+    printf("%s", cmd);
+
     //初始化buf,以免后面写如乱码到文件中
     log = (char *) malloc (SIZE);
     memset(log, 0, sizeof(SIZE));
@@ -37,6 +59,10 @@ JNIEXPORT void JNICALL Java_com_jni_GIT_log(JNIEnv * env, jobject obj,
 
     //将buf中的数据写到FILE    *wstream对应的流中，也是写到文件中
     fwrite(log, sizeof(char), read, w_file);
+
+    (*env)->ReleaseStringUTFChars(env, path, temp_path);
+    (*env)->ReleaseStringUTFChars(env, author, temp_author);
+    (*env)->ReleaseStringUTFChars(env, since, temp_since);
 
     pclose(git_pipe); 
     fclose(w_file);
