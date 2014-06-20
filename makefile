@@ -2,8 +2,8 @@
 # '#': comments
 # ':': dependency
 ##########################################
-PROJ = JniGIT
-LIB_NAME = git
+PROJ = JniUNIX
+LIB_NAME = unix
 
 C = gcc
 OUT = -o
