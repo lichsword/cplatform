@@ -19,23 +19,44 @@ JNIEXPORT void JNICALL Java_com_jni_UNIX_invoke(JNIEnv * env, jobject obj, jstri
     const char * temp_cmd = (*env)->GetStringUTFChars(env, cmd, 0);
     const char * temp_path = (*env)->GetStringUTFChars(env, path, 0);
 
-    printf("%s", temp_cmd);
-
+#ifdef In_Debug
+    printf("invoke cmd=%s\n", temp_cmd);
+    printf("popen...start\n");
+#endif
     cmd_pipe = popen(temp_cmd, "r");
+#ifdef In_Debug
+    printf("popen...end\n");
+#endif
 
     output_str = (char *)malloc(SIZE);
     memset(output_str, 0, sizeof(SIZE));
 
+#ifdef In_Debug
+    printf("getdelim...start\n");
+#endif
     read = getdelim(&output_str, &len, '\0', cmd_pipe);
-    output_file = fopen(temp_path, "w+");
+#ifdef In_Debug
+    printf("getdelim...end\n");
+    printf("read count=%d\n", read);
+#endif
+    if(read != -1){
+        output_file = fopen(temp_path, "w+");
+        fwrite(output_str, sizeof(char), read, output_file);
 
-    fwrite(output_str, sizeof(char), read, output_file);
+        if(output_file != NULL){
+            fclose(output_file);
+	}// end if
+
+    }// end if
+
+    if(cmd_pipe != NULL){
+        pclose(cmd_pipe);
+    }// end if
     
+    free(output_str);
+
     (*env)->ReleaseStringUTFChars(env, cmd, temp_cmd); 
     (*env)->ReleaseStringUTFChars(env, path, temp_path); 
-
-    pclose(cmd_pipe);
-    fclose(output_file);
 }
 
 JNIEXPORT void JNICALL Java_com_jni_UNIX_wc(JNIEnv * env, jobject obj, jstring param, jstring path){
